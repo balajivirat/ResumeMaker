@@ -1,0 +1,57 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+    /* background-color: rgb(119, 109, 109); */
+    /* height: 100%; */
+}
+.align{
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    background-color: black;
+    height: 100%;
+}
+.resume{
+    width: 60%;
+    /* height: 100vh; */
+    background-color: #fff;
+    padding: 6%;
+}
+ul{
+    list-style: none;
+}
+h1{
+    color: rgb(115, 160, 228);
+}
+h3{
+    color: rgb(62, 165, 224);
+}
+li{
+    padding-bottom: 13px;
+}
+.pb{
+    padding-bottom: 13px;
+}
+.padding{
+    padding-left: 35px;
+}
+.section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.skills{
+    width: 30%;
+}
+button{
+    /* margin-left: 30%; */
+    padding: 1%;
+    margin-top: 2%;
+    background: #565151;
+    border-radius: 10px;
+    color: #fff;
+    /* border: none; */
+    /* border-style: none; */
+
+  }

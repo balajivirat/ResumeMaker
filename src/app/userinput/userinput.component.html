@@ -1,0 +1,112 @@
+<div class="bg">
+    <div id="card">
+        <div id="card-content">
+            <div id="card-title">
+                <h2><b>CREATE YOUR RESUME</b></h2>
+                <div class="underline-title"></div>
+            </div>
+            <div class="contents">
+                <form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm.value)">
+                    <p>
+                        <input type="text" placeholder="Fullname" name="fullname" ngModel>
+                    </p>
+                    <p>
+                        <input type="text" placeholder="Professional Title" name="professional" ngModel>
+                    </p>
+                    <p>
+                        <input type="number" placeholder="Phone No" name="phoneno" ngModel>
+                    </p>
+                    <p>
+                        <textarea name="address" placeholder="Full Detailed Address" rows="10" ngModel></textarea>
+                    </p>
+                    <p>
+                        <input type="email" placeholder="Email" name="email" ngModel>
+                    </p>
+                    <p>
+                        <textarea name="profilesummary" placeholder="Profile Summary" rows="10" cols="50"
+                            ngModel></textarea>
+                    </p>
+                    <div>
+                        <label><h1>Work Experience :</h1></label>
+                        <p><input type="text" name="workexperience" placeholder="Position" ngModel></p>
+                        <p><input type="text" name="workexperiencecompany" placeholder="Year of Experience" ngModel></p>
+                        <p><input type="text" name="workexperienceproject" placeholder="Projects Done" ngModel></p>
+                        <div *ngFor="let value of experience; let i = index;">
+                            <p><input type="text" name="workexperience{{i}}" placeholder="Position" ngModel></p>
+                            <p><input type="text" name="workexperiencecompany{{i}}" placeholder="Year of Experience" ngModel></p>
+                            <p><input type="text" name="workexperienceproject{{i}}" placeholder="Projects Done" ngModel></p>
+                            <div class="btn">
+                                <button class="subbtnn" (click)=removeexperience(i)><i class="fa fa-minus-circle"></i></button>
+                            </div>
+                        </div>
+                        <button type="button" (click)="addexperience()"><i class="fa fa-plus-circle"></i></button>
+                    </div>
+
+                    <div>
+                        <label><h1>Education :</h1></label>
+                        <p><input type="text" name="educationname" placeholder="Name" ngModel></p>
+                        <p><input type="text" name="educationyear" placeholder="Year" ngModel></p>
+                        <p><input type="text" name="educationdescription" placeholder="Description" ngModel></p>
+                        <div *ngFor="let value of education; let i = index;">
+                            <p><input type="text" name="educationname{{i}}" placeholder="Name" ngModel></p>
+                            <p><input type="text" name="educationyear{{i}}" placeholder="Year" ngModel></p>
+                            <p><input type="text" name="educationdescription{{i}}" placeholder="Description" ngModel></p>
+                            <div class="btn">
+                                <button class="subbtnn" (click)=removeeducation(i)><i class="fa fa-minus-circle"></i></button>
+                            </div>
+                        </div>
+                        <button type="button" (click)="addeducation()"><i class="fa fa-plus-circle"></i></button>
+                    </div>
+
+                    <div>
+                        <label><h1>Skills :</h1></label>
+                        <input type="text" name="skills" placeholder="Skills" ngModel>
+                        <div class="df" *ngFor="let value of skills; let i = index;">
+                            <input class="margin" type="text" name="skills{{i}}" placeholder="Skills" ngModel>
+                            <button class="subbtnn" (click)=removeskills(i)><i class="fa fa-minus-circle"></i></button>
+                        </div>
+                        <button type="button" (click)="addskills()"><i class="fa fa-plus-circle"></i></button>
+                    </div>
+
+
+                    <div>
+                        <label><h1>SocialLinks :</h1></label>
+                        <input type="text" name="sociallinks" placeholder="Social Links" ngModel>
+                        <div class="df" *ngFor="let value of sociallinks; let i = index;">
+                            <input class="margin" type="text" name="sociallinks{{i}}" placeholder="Links" ngModel>
+                            <button  class="subbtnn" (click)=removesociallinks(i)><i class="fa fa-minus-circle"></i></button>
+                        </div>
+                        <button type="button" (click)="addsociallinks()"><i class="fa fa-plus-circle"></i></button>
+                    </div>
+
+
+                    <div>
+                        <label><h1>Interests :</h1></label>
+                        <input type="text" name="interests" placeholder="Interests" ngModel>
+                        <div class="df" *ngFor="let value of interests; let i = index;">
+                            <input class="margin" type="text" name="interests{{i}}" placeholder="Interests" ngModel>
+                            <button class="subbtnn" (click)=removeinterests(i)><i class="fa fa-minus-circle"></i></button>
+                        </div>
+                        <button type="button" (click)="addinterests()"><i class="fa fa-plus-circle"></i></button>
+                    </div>
+
+                    <div>
+                        <label><h1>Languages :</h1></label>
+                        <input type="text" name="languages" placeholder="Languages" ngModel>
+                        <div class="df" *ngFor="let value of languages; let i = index;">
+                            <input class="margin" type="text" name="languages{{i}}" placeholder="Languages" ngModel>
+                            <button class="subbtnn" (click)=removelanguages(i)><i class="fa fa-minus-circle"></i></button>
+                        </div>
+                        <button type="button" (click)="addlanguages()"><i class="fa fa-plus-circle"></i></button>
+                    </div>
+
+                    <p>
+                        <textarea name="expertise" placeholder="Expertise" rows="10" cols="50" ngModel></textarea>
+                    </p>
+                    <div class="btn"><button class="subbtn" type="submit">Submit</button></div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
